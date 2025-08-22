@@ -35,11 +35,11 @@ interface CustomTool {
 }
 
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.GEMINI_API_KEY;
 if (!API_KEY) {
     // In a real app, you might want to show this to the user in a less disruptive way.
-    alert("Gemini API key is not configured. Please set the API_KEY environment variable.");
-    throw new Error("API_KEY environment variable is not set.");
+    alert("Gemini API key is not configured. Please set the GEMINI_API_KEY environment variable.");
+    throw new Error("GEMINI_API_KEY environment variable is not set.");
 }
 const ai = new GoogleGenAI({ apiKey: API_KEY });
 
